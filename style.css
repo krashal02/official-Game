@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #121217;
+  color: #eee;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  box-shadow: 0 5px 15px rgba(50, 50, 100, 0.7);
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #00ffea;
+  letter-spacing: 4px;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 0 10px #00ffea;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  color: #6fffe9;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #a0f0e5;
+}
+
+#music-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #00ffe0;
+  cursor: pointer;
+  text-shadow: 0 0 10px #00ffe0;
+}
+
+.gallery {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 15px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.hobby {
+  background: #1e1e2f;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 255, 234, 0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.4s;
+}
+
+.hobby:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px #00ffea, 0 0 40px #00ffe0;
+  border-color: #00ffe0;
+}
+
+.hobby img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.hobby:hover img {
+  filter: brightness(1);
+}
+
+.hobby h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffe0;
+  padding: 20px 20px 10px;
+  font-size: 1.5rem;
+}
+
+.hobby p {
+  padding: 0 20px 20px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.hobby a {
+  display: block;
+  margin: 0 20px 20px;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #00ffe0, #00aaff);
+  color: #121217;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00ffe0;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby a:hover {
+  background: linear-gradient(90deg, #00aaff, #005f99);
+  box-shadow: 0 0 15px #00aaff;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 20px;
+  background: #0f0c29;
+  color: #555;
+  font-size: 0.9rem;
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.1rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .hobby img {
+    height: 150px;
+  }
+
+  .hobby a {
+    padding: 16px 0;
+    font-size: 1.1rem;
+  }
+}
